@@ -34,3 +34,17 @@ https://unpkg.com/パッケージ名@バージョン/ディレクトリ/ファ�
 - --save-dev, --save
   - --saveは本番用、--save-devは開発用、依存関係
 - `npm webpack`の後に`--`をつけると引数を渡せる
+
+### Assets Management
+
+1. npm install --save-dev style-loader css-loader
+2. npm run build
+3. open dist/index.html
+4. npm install --save-dev csv-loader xml-loader
+5. npm install --save-dev yamljs json5
+6. npm install toml yamljs json5 --save-dev
+
+### memo
+
+- /src/assetsにまとめて入れるより、/src/components/my-componentsに分けて入れると管理しやすい。
+
