@@ -1,20 +1,14 @@
-import _ from 'lodash';
-import printMe from './print.js';
-
-function component() {
+async function getComponent() {
   const element = document.createElement('div');
   const p = document.createElement('p');
-  const btn = document.createElement('button');
+  const { default: _ } = await import('lodash');
 
-  p.innerHTML = _.join(['やっはろー', 'Webpack'], ' ');
-
-  btn.innerHTML = 'ここを押すとログが出るよ！';
-  btn.onclick = printMe;
-
+  p.innerHTML = _.join(['Hello', 'Webpack'], ' ');
   element.appendChild(p);
-  element.appendChild(btn);
 
   return element;
 }
 
-document.body.appendChild(component());
+getComponent().then((component) => {
+  document.body.appendChild(component);
+});

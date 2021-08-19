@@ -1,5 +1,7 @@
 # webpack-tutorial
 
+https://webpack.js.org/guides/
+
 ## Getting started
 
 1. npm init -y
@@ -76,3 +78,11 @@ https://unpkg.com/パッケージ名@バージョン/ディレクトリ/ファ�
 
 3. webpack-middleware
    - サーバの設定を幅広く変更できる
+
+## Code Splitting
+
+- dependOnオプションはchunk間でモジュールを共有できる
+- 1つのHTMLページで複数のエントリーポイントを使用する場合は、最適化.runtimeChunk: single」も必要です。
+- SplitChunksPluginを使うと、既存のentry chunkや全く新しいchunkに共通の依存関係を抽出することができます
+- returnにインポートを書いてそのまま返すDynamic Importsというやり方もあるhttps://webpack.js.org/guides/code-splitting/#dynamic-imports
+
