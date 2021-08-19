@@ -1,6 +1,6 @@
 # webpack-tutorial
 
-### Getting started
+## Getting started
 
 1. npm init -y
 2. npm install webpack webpack-cli --save-dev
@@ -12,7 +12,7 @@
 8. open dist/index.html
 9. npm run build -- --color
 
-## memo
+### memo
 
 - unpkg.com (https://unpkg.com/)
   - CDN services, npmに登録されているパッケージを手軽に利用できる
@@ -35,7 +35,7 @@ https://unpkg.com/パッケージ名@バージョン/ディレクトリ/ファ�
   - --saveは本番用、--save-devは開発用、依存関係
 - `npm webpack`の後に`--`をつけると引数を渡せる
 
-### Assets Management
+## Assets Management
 
 1. npm install --save-dev style-loader css-loader
 2. npm run build
@@ -48,3 +48,13 @@ https://unpkg.com/パッケージ名@バージョン/ディレクトリ/ファ�
 
 - /src/assetsにまとめて入れるより、/src/components/my-componentsに分けて入れると管理しやすい。
 
+## Output Management
+
+1. npm install --save-dev html-webpack-plugin
+
+### memo
+
+- html-webpack-pluginはhtmlを出力する
+- 詳細 -> https://github.com/jantimon/html-webpack-plugin
+
+- output: { clean: true }を指定すると./dist/以下のファイルを綺麗にしてくれる
