@@ -58,3 +58,21 @@ https://unpkg.com/パッケージ名@バージョン/ディレクトリ/ファ�
 - 詳細 -> https://github.com/jantimon/html-webpack-plugin
 
 - output: { clean: true }を指定すると./dist/以下のファイルを綺麗にしてくれる
+
+## Development
+
+1. npm install --save-dev webpack-dev-server
+2. npm install --save-dev express webpack-dev-middleware
+
+### memo
+
+- devtool: 'inline-source-map'でエラーを追跡できる
+
+1. webpack's Watch Mode
+   - ブラウザをリフレッシュすると内容が変わる
+
+2. webpack-dev-server
+   - `localhost:8000`でサーバーが立ち上がる
+
+3. webpack-middleware
+   - サーバの設定を幅広く変更できる

@@ -6,9 +6,9 @@ function component() {
   const p = document.createElement('p');
   const btn = document.createElement('button');
 
-  p.innerHTML = _.join(['やっはろー', 'webpack'], ' ');
+  p.innerHTML = _.join(['やっはろー', 'Webpack'], ' ');
 
-  btn.innerHTML = 'Click me and check the console!';
+  btn.innerHTML = 'ここを押すとログが出るよ！';
   btn.onclick = printMe;
 
   element.appendChild(p);
